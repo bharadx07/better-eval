@@ -1,0 +1,22 @@
+{
+  "name": "better-eval",
+  "version": "1.0.0",
+  "description": "🔧 An alternative to the 'eval' function in JavaScript that is faster, easier/better to use, and has less security issues.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharadwajduggaraju/better-eval.git"
+  },
+  "keywords": [
+    "eval"
+  ],
+  "author": "Bharadwaj Duggaraju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bharadwajduggaraju/better-eval/issues"
+  },
+  "homepage": "https://github.com/bharadwajduggaraju/better-eval#readme"
+}
