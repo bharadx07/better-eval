@@ -39,9 +39,9 @@ You can notice that the second parameter decides where the code is executed.
 ```local``` executes the code with a function on the current context.
 ```vm``` executes the code on a node.js VM.
 
-#### Usage with the VM option can be done like this:
+### VM Usage
 ```js
-betterEval('"Hey!".toUpperCase()') // returns HEY!
+betterEval('"Hey!".toUpperCase()', 'vm') // returns HEY!
 ```
 
 ## License
