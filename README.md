@@ -2,9 +2,9 @@
 
 > 🚩 better-eval is under development, lacks testing and may have many bugs. Use at your own risk.
 
-### An alternative to the 'eval' function in JavaScript that is faster, easier/better to use, and has less security issues.
+### An alternative to the ```eval()``` function in JavaScript that is faster, easier/better to use, and has less security issues.
 
-The eval function in Javascript has been known for years as a red-flag for evaluating code, and there lacks many alternatives that provide the same simplicity that the original eval function provided. Better-Eval aims to solves this problem by providing a simple package to evaluate any code in Javascript with a variety of options, but without the same security issues and lack of speed that the original eval function had.
+The eval function in JS sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. Better-Eval solves this problem by fixing these security & speed issues, and delivering the same simplicity. 
 
 [![NPM Version](https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000)](https://www.npmjs.com/package/million) 
  
@@ -37,7 +37,7 @@ betterEval('1+1', 'local') // returns 2!
 You can notice that the second parameter decides where the code is executed.
 
 ```local``` executes the code with a function on the current context.
-```vm``` executes the code on a node.js VM
+```vm``` executes the code on a node.js VM.
 
 #### Usage with the VM option can be done like this:
 ```js
