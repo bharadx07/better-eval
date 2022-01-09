@@ -1,6 +1,6 @@
 # 🔧 better-eval
 
-> 🚩 better-eval is under development, lacks testing and may have many bugs. Use at your own risk.
+> 🚩 better-eval is under development, lacks testing and could have bugs. Use at your own risk.
 
 ### An alternative to the ```eval()``` function in JavaScript that is faster, easier/better to use, and has less security issues.
 
@@ -17,7 +17,7 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 - Fast and Secure.
 
 ## Up Next
-- Add variables from your current context into the betterEval context
+- Add variables from your current context into the betterEval context.
 - Option to completely clear the current context.
 - Tests.
 - Benchmarks - Compare to other options and ```eval()```.
