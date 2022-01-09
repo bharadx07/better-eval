@@ -46,4 +46,4 @@ betterEval('"Hey!".toUpperCase()') // returns HEY!
 
 ## License
 
-Better-Eval is [MIT-licensed](LICENSE) open-source software.
+Better-Eval is [MIT-licensed](LICENSE) open-source software created by Bharadwaj Duggaraju.
