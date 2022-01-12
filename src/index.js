@@ -1,49 +1,37 @@
 "use strict";
 
 const vm = require("vm");
+const insertedClearContext = require("./clearContext");
+const parseInsertedVariables = require("./parseInsertedVariabels");
 
 /**
- * @description takes code to execute and the context to exec it in, and exec's the code in the context!
- * @param {string} code
- * @param {'local' | 'vm'} execContext
+ * @description takes code to execute and exexcutes it safely!
+ * @param {string} code - Code to be executed.
+ * @param {object} insertedVariables - Variables from your code to pass into the execution context. Passed in like: {variableName, variableValue}
+ * @param {object} vmOptions - The options for how to run the VM to execute the code.
  * @returns {any} if your evaluated code returns a value, then betterEval will return it to you.
  */
-function betterEval(code, execContext) {
-  if (execContext === "local") {
-    /* option 1. we want to run the code on a local fn context */
+function betterEval(code, insertedVariables = null, vmOptions = {}) {
+  //start by generating a random variable name for our evaled value
+  const resultName = "EVAL_VALUE_" + Math.floor(Math.random() * 1000000);
 
-    // literal text of function to flush the value out
-    const flush = `return ${code}`;
+  //then assign it to our results object
+  let results = {};
+  results[resultName] = null;
 
-    //construct function that runs the 'flush'
-    const flushFn = new Function(flush);
-
-    //run the function and return the value if exists
-    return flushFn();
-  } else if (execContext === "vm") {
-    /* option 2/. we want to run on a node vm */
-
-    //start by generating a random variable name for our evaled value
-    const resultName = "EVAL_VALUE_" + Math.floor(Math.random() * 1000000);
-
-    //then assign it to our results object
-    const results = {};
-    results[resultName] = null;
-
-    //set the variable equal to the code
-    const codeExec = `${resultName} = ${code}`;
-
-    //run the code on the vm
-    vm.runInNewContext(codeExec, results);
-
-    //return the executed value
-    return results[resultName];
-  } else {
-    /* otherwise: the context isn't right, throw an error */
-    throw new Error(
-      "Unsupported context for execution. Please choose between 'local' and 'vm'."
-    );
+  // if we want to add our own variables to the function, take care of parsing that
+  if (insertedVariables) {
+    results = parseInsertedVariables(insertedVariables, results);
   }
+
+  //set the variable equal to the code
+  const codeExec = `${insertedClearContext}; ${resultName} = ${code}`;
+
+  //run the code on the vm
+  vm.runInNewContext(codeExec, results, vmOptions);
+
+  //return the executed value
+  return results[resultName];
 }
 
 module.exports = betterEval;

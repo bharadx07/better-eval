@@ -18,7 +18,6 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 
 ## Up Next
 - Add variables from your current context into the betterEval context.
-- Option to completely clear the current context.
 - Tests.
 - Benchmarks - Compare to other options and ```eval()```.
 
