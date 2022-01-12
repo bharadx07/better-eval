@@ -7,7 +7,7 @@
 The eval function in JS sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. Better-Eval solves this problem by fixing these security & speed issues, and delivering the same simplicity. 
 
 [![NPM Version](https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000)](https://www.npmjs.com/package/better-eval) 
- 
+![NPM Downloads](https://img.shields.io/npm/dt/better-eval.svg?style=flat-square&color=FF524C&labelColor=000) 
 
 ## Why Better-Eval?
 
