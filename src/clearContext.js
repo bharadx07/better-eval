@@ -3,7 +3,9 @@
  */
 function clearContext() {
   // eslint-disable-next-line no-global-assign
-  Function = undefined;
+  Function = null;
+  eval = null;
+
   const keys = Object.getOwnPropertyNames(this).concat(["constructor"]);
   keys.forEach((key) => {
     const item = this[key];

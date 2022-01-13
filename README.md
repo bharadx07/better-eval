@@ -36,17 +36,33 @@ const betterEval = require('better-eval')
 
 Then call the function with something you want to be evaluated:
 ```js
-betterEval('1+1', 'local') // returns 2!
+betterEval('1+1') // returns 2!
 ```
 
-You can notice that the second parameter decides where the code is executed.
+And its as simple as that!
 
-```local``` executes the code with a function on the current context.
-```vm``` executes the code on a node.js VM.
+better-eval will make sure to not leak any variables from the current scope into the execution context.
 
-### VM Usage
+<b>So - how in the world do we pass our own variables into better-eval?</b>
+
+## Passing Variables
+Include any variables as part of an object which you pass in as the second parameter:
 ```js
-betterEval('"Hey!".toUpperCase()', 'vm') // returns HEY!
+const name = "Sam"
+
+betterEval("`Hey ${name}`", {name}) //returns 'Hey Sam'
+```
+
+You can also pass functions as a part of the second parameter, and evaluate them in your code:
+```js
+const returnName = () => "Bob"
+
+betterEval("`Hey ${returnName()}`", {returnName})
+```
+
+However, for your safety, usage of the ```Function` constructor and ```eval``` function are disabled, and will not be added to your variables.
+```js
+betterEval("`Sum is{eval('1+1')}`", {eval}) // eval is null!
 ```
 
 ## License

@@ -1,7 +1,4 @@
 const betterEval = require("../src");
 
-const code = "process.env";
 
-betterEval(code, { process });
-
-console.log(betterEval(code, { process }));
+console.log(betterEval("`Sum is ${eval('1+1')}`", {eval})) // eval is undefined!
