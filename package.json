@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/bharadwajduggaraju/better-eval/issues"
   },
-  "homepage": "https://github.com/bharadwajduggaraju/better-eval#readme"
+  "homepage": "https://github.com/bharadwajduggaraju/better-eval#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
 }
