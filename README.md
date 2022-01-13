@@ -17,7 +17,7 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 - Fast and Secure.
 
 ## Up Next
-- Add variables from your current context into the betterEval context.
+- Complete features, and improve upon other versions.
 - Tests.
 - Benchmarks - Compare to other options and ```eval()```.
 
