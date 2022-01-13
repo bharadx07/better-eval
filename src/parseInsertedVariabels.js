@@ -2,10 +2,10 @@
  * @param {object} vars
  * @param {'local' | 'vm'} execContext
  */
-function parseInsertedVariables(context, sandbox) {
-  Object.keys(context).forEach(function (key) {
-    if (context[key] === Function || context[key] === eval) return;
-    sandbox[key] = context[key];
+function parseInsertedVariables(vars, sandbox) {
+  Object.keys(vars).forEach(function (key) {
+    if (vars[key] === Function || vars[key] === eval) return;
+    sandbox[key] = vars[key];
   });
 
   return sandbox;
