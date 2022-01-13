@@ -18,6 +18,8 @@ function clearContext() {
   });
 }
 
-const insertedClearContext = `${clearContext.toString()}; eval = null; clearContext()`;
+const stricModeEvadeEval = "eval = null;"
+
+const insertedClearContext = `${clearContext.toString()}; ${stricModeEvadeEval} clearContext()`;
 
 module.exports = insertedClearContext;
