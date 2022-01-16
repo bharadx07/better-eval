@@ -4,7 +4,7 @@
 
 ### An alternative to the ```eval()``` function in JavaScript that is easier/better to use and has less security issues.
 
-The eval function in JS sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. Better-Eval solves this problem by fixing these security & speed issues, and delivering the same simplicity. 
+The eval function in JS sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. Better-Eval solves this problem by fixing these security issues, and delivering the same simplicity. 
 
 [![NPM Version](https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000)](https://www.npmjs.com/package/better-eval) 
 ![NPM Downloads](https://img.shields.io/npm/dt/better-eval.svg?style=flat-square&color=FF524C&labelColor=000) 
@@ -14,7 +14,7 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 - Small and Lightweight.
 - A simple and easy to use API.
 - Easily customizable for your needs.
-- Fast and Secure.
+- Secure to use.
 
 ## Up Next
 - Complete features, and improve upon other versions.
