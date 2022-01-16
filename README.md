@@ -65,6 +65,16 @@ However, for your safety, usage of the ```Function``` constructor and ```eval```
 betterEval("`Sum is{eval('1+1')}`", {eval}) // eval is null!
 ```
 
+## Configuring the VM
+If you want to have more control over the VM that runs your code, you can pass in an ```vmOptions``` parameter:
+```js
+betterEval("1+1", {}, {
+    fileName: 'counting',
+    lineOffset: 1
+})
+```
+A complete list of options can be found [here](https://nodejs.org/api/vm.html#vmrunincontextcode-contextifiedobject-options).
+
 ## License
 
 Better-Eval is [MIT-licensed](LICENSE) open-source software created by Bharadwaj Duggaraju.

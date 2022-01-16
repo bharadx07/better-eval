@@ -8,7 +8,7 @@ const parseInsertedVariables = require("./parseInsertedVariabels");
  * @description takes code to execute and exexcutes it safely!
  * @param {string} code - Code to be executed.
  * @param {object} insertedVariables - Variables from your code to pass into the execution context. Passed in like: {variableName, variableValue}
- * @param {object} vmOptions - The options for how to run the VM to execute the code.
+ * @param {object} vmOptions - The options for how to run the VM to execute the code (more info in vm pkg docs).
  * @returns {any} if your evaluated code returns a value, then betterEval will return it to you.
  */
 function betterEval(code, insertedVariables = null, vmOptions = {}) {
