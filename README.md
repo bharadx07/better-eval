@@ -16,9 +16,6 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 - Easily customizable for your needs.
 - Secure to use.
 
-## Up Next
-- Complete features, and improve upon other versions.
-
 
 ## Installing Better-Eval
 
