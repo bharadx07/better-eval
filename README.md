@@ -18,8 +18,7 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 
 ## Up Next
 - Complete features, and improve upon other versions.
-- Tests.
-- Benchmarks - Compare to other options and ```eval()```.
+
 
 ## Installing Better-Eval
 
