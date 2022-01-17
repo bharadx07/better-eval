@@ -17,3 +17,13 @@ test("should not be able to pass function constructor", () => {
   // test
   expect(failEval).toBe(expected);
 });
+
+test("should not be able to pass require", () => {
+    // no pass eval
+    const failEval = betterEval("require", { require });
+    // expected
+    const expected = null;
+    // test
+    expect(failEval).toBe(expected);
+  });
+  
