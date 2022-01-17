@@ -4,6 +4,7 @@
 function clearContext() {
   // eslint-disable-next-line no-global-assign
   Function = null;
+  require = null
 
   const keys = Object.getOwnPropertyNames(this).concat(["constructor"]);
   keys.forEach((key) => {
@@ -18,8 +19,8 @@ function clearContext() {
   });
 }
 
-const stricModeEvadeEval = "eval = null;"
+const strictModeEvadeEval = "eval = null;"
 
-const insertedClearContext = `${clearContext.toString()}; ${stricModeEvadeEval} clearContext()`;
+const insertedClearContext = `${clearContext.toString()}; ${strictModeEvadeEval} clearContext()`;
 
 module.exports = insertedClearContext;

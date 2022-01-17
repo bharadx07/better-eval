@@ -1,10 +1,16 @@
+const blackListedVariables = [
+  eval,
+  Function,
+  require,
+];
+
 /**
  * @param {object} vars
  * @param {'local' | 'vm'} execContext
  */
 function parseInsertedVariables(vars, sandbox) {
   Object.keys(vars).forEach(function (key) {
-    if (vars[key] === Function || vars[key] === eval) return;
+    if (blackListedVariables.includes(vars[key])) return;
     sandbox[key] = vars[key];
   });
 
