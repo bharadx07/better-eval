@@ -2,3 +2,5 @@
 node_modules
 test
 package-lock.json
+jest.config.js
+jsconfig.js
