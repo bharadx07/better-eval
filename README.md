@@ -1,13 +1,13 @@
 # 🔧 better-eval
 
-> 🚩 better-eval is under development, lacks testing and could have bugs. Use at your own risk.
+> 🚩 better-eval doesnt fully protect you from user code. Use at your own risk.
 
 ### An alternative to the ```eval()``` function in JavaScript that is easier/better to use and has less security issues.
 
 The eval function in JS sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. Better-Eval solves this problem by fixing these security issues, and delivering the same simplicity. 
 
 [![NPM Version](https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000)](https://www.npmjs.com/package/better-eval) 
-![NPM Downloads](https://img.shields.io/npm/dt/better-eval.svg?style=flat-square&color=FF524C&labelColor=000) 
+[![NPM Downloads](https://img.shields.io/npm/dt/better-eval.svg?style=flat-square&color=FF524C&labelColor=000)](https://www.npmjs.com/package/better-eval)  
 
 ## Why Better-Eval?
 
