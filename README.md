@@ -35,7 +35,7 @@ Then call the function with something you want to be evaluated:
 betterEval('1+1') // returns 2!
 ```
 
-And its as simple as that! 
+And its as simple as that! No variables from your context will be leaked to the function.
 
 ## Passing Variables
 Include any variables as part of an object which you pass in as the second parameter:
