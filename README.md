@@ -35,11 +35,7 @@ Then call the function with something you want to be evaluated:
 betterEval('1+1') // returns 2!
 ```
 
-And its as simple as that!
-
-better-eval will make sure to not leak any variables from the current scope into the execution context.
-
-<b>So - how in the world do we pass our own variables into better-eval?</b>
+And its as simple as that! 
 
 ## Passing Variables
 Include any variables as part of an object which you pass in as the second parameter:
