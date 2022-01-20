@@ -1,11 +1,12 @@
 {
   "name": "better-eval",
-  "version": "1.0.9",
+  "version": "1.2.0",
   "description": "🔧 An alternative to the 'eval' function in JavaScript that is faster, easier/better to use, and has less security issues.",
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "publish": "node scripts/bump-version.js"
+    "bump-version": "node scripts/bump-version.js",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
