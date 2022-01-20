@@ -4,3 +4,4 @@ test
 package-lock.json
 jest.config.js
 jsconfig.json
+scripts
