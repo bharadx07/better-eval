@@ -19,8 +19,7 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 - 🛠️  Easily customizable for your needs.
 - ✅ Tested and Mantained.
 
-## Installing Better-Eval
-
+## Installation
 ```sh
 npm install better-eval
 ```
