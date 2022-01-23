@@ -54,7 +54,7 @@ betterEval("`Hey ${returnName()}`", {returnName})
 
 However, for your safety, usage of the ```Function``` constructor and ```eval``` function are disabled, and will not be added to your variables.
 ```js
-betterEval("`Sum is{eval('1+1')}`", {eval}) // eval is null!
+betterEval("`Sum is {eval('1+1')}`", {eval}) // eval is null!
 ```
 
 ## Configuring the VM
