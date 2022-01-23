@@ -12,10 +12,10 @@ const parseInsertedVariables = require("./parseInsertedVariabels");
  * @returns {any} if your evaluated code returns a value, then betterEval will return it to you.
  */
 function betterEval(code, insertedVariables = null, vmOptions = {}) {
-  //start by generating a random variable name for our evaled value
+  // start by generating a random variable name for our evaled value
   const resultName = "EVAL_RESULT_" + Math.floor(Math.random() * 1000000);
 
-  //then assign it to our results object
+  // then assign it to our results object
   let results = {};
   results[resultName] = null;
 
@@ -27,10 +27,10 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
   //set the variable equal to the code
   const codeExec = `${insertedClearContext}; ${resultName} = ${code}`;
 
-  //run the code on the vm
+  // run the code on the vm
   vm.runInNewContext(codeExec, results, vmOptions);
 
-  //return the executed value
+  // return the executed value
   return results[resultName];
 }
 
