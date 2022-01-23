@@ -2,7 +2,7 @@
 
 > 🚩 better-eval should not be used with code that could harm your application.
 
-### An alternative to the `eval()` function in JavaScript that is easier/better to use and has less security issues.
+### An alternative to ```eval()``` in JavaScript that is customizable and safer!
 
 The eval function in JS sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. Better-Eval solves this problem by fixing these security issues, and delivering the same simplicity.
 
