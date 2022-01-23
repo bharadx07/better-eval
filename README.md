@@ -4,7 +4,7 @@
 
 ### An alternative to ```eval()``` in JavaScript that is customizable and safer!
 
-The eval function in JavaScript sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. **better-eval** solves this problem by adressing the security issues, and delivering the same simplicity.
+The eval function in JavaScript sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. **better-eval** solves this problem by adressing the security and spped issues, while delivering the same easy-to-use API.
 
 <a href="https://www.npmjs.com/package/better-eval">
   <img src="https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000" alt="NPM Version">
@@ -61,7 +61,7 @@ betterEval("`Hey ${returnName()}`", { returnName });
 However, for your safety, usage of the `Function` constructor, `eval` function and `require` function are disabled, and will not be added to your variables.
 
 ```js
-betterEval("`Sum is {eval('1+1')}`", { eval }); // eval is null!
+betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
 
 ## Configuring the VM
@@ -70,8 +70,7 @@ If you want to have more control over the VM that runs your code, you can pass i
 
 ```js
 betterEval(
-  "1+1",
-  {},
+  "1+1", {},
   {
     fileName: "counting",
     lineOffset: 1,
