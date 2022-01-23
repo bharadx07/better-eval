@@ -14,10 +14,10 @@ The eval function in JS sucks, and there lacks alternatives that provide the sam
 
 ## Why Better-Eval?
 
-- Small and Lightweight.
-- A simple and easy to use API.
-- Easily customizable for your needs.
-- Secure to use.
+- 🕊 Small and Lightweight.
+- ⚡ A simple and easy to use API.
+- 🛠️  Easily customizable for your needs.
+- ✅ Tested and Mantained.
 
 ## Installing Better-Eval
 
