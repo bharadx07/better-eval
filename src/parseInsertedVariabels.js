@@ -1,8 +1,4 @@
-const blackListedVariables = [
-  eval,
-  Function,
-  require,
-];
+const { blackListedVariablesNode } = require("./blackList");
 
 /**
  * @param {object} vars
@@ -10,7 +6,7 @@ const blackListedVariables = [
  */
 function parseInsertedVariables(vars, sandbox) {
   Object.keys(vars).forEach(function (key) {
-    if (blackListedVariables.includes(vars[key])) return;
+    if (blackListedVariablesNode.includes(vars[key])) return;
     sandbox[key] = vars[key];
   });
 

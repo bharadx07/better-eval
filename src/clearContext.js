@@ -2,10 +2,6 @@
  * @description prevents functions from the global scope from leaking into the betterEval scope
  */
 function clearContext() {
-  // eslint-disable-next-line no-global-assign
-  Function = null;
-  require = null
-
   const keys = Object.getOwnPropertyNames(this).concat(["constructor"]);
   keys.forEach((key) => {
     const item = this[key];
@@ -19,8 +15,6 @@ function clearContext() {
   });
 }
 
-const strictModeEvadeEval = "eval = null;"
-
-const insertedClearContext = `${clearContext.toString()}; ${strictModeEvadeEval} clearContext()`;
+const insertedClearContext = `${clearContext.toString()}; clearContext()`;
 
 module.exports = insertedClearContext;
