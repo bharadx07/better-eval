@@ -4,7 +4,7 @@
 const vm = require("vm");
 // lib
 const insertedClearContext = require("./clearContext");
-const parseInsertedVariables = require("./parseInsertedVariabels");
+const parseInsertedVariables = require("./parseInsertedVariables");
 const { blackListedContext } = require("./blackList");
 
 /**
@@ -30,8 +30,6 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
     );
   }
 
-  console.log(contextVariables)
-
   //set the variable equal to the code
   const codeExec = `${insertedClearContext}; ${resultName} = ${code}`;
 
@@ -44,4 +42,4 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
 
 module.exports = betterEval;
 
-console.log(betterEval("require", {require}))
+console.log(betterEval("!!require", {require}))
