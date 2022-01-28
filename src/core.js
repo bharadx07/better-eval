@@ -42,4 +42,4 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
 
 module.exports = betterEval;
 
-console.log(betterEval("!!require", {require}))
+console.log(betterEval("!!Function", {Function}))
