@@ -16,22 +16,22 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
   const resultName = "EVAL_RESULT_" + Math.floor(Math.random() * 1000000);
 
   // then assign it to our results object
-  let results = {};
-  results[resultName] = null;
+  let contextVariables = {};
+  contextVariables[resultName] = null;
 
   // if we want to add our own variables to the function, take care of parsing that
   if (insertedVariables) {
-    results = parseInsertedVariables(insertedVariables, results);
+    contextVariables = parseInsertedVariables(insertedVariables, contextVariables);
   }
 
   //set the variable equal to the code
   const codeExec = `${insertedClearContext}; ${resultName} = ${code}`;
 
   // run the code on the vm
-  vm.runInNewContext(codeExec, results, vmOptions);
+  vm.runInNewContext(codeExec, contextVariables, vmOptions);
 
   // return the executed value
-  return results[resultName];
+  return contextVariables[resultName];
 }
 
 module.exports = betterEval;
