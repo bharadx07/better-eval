@@ -1,5 +1,5 @@
 // blacklisted variables (no fn) to be passed in through vars param in betterEval
-const blackListedVariablesNode = [eval, Function, global, process, module];
+const blackListedVariablesNode = [eval, Function, global, process];
 
 // functions that will be set to null in the betterEval default context for double safet
 const blackListedVariableStrings = [

@@ -2,7 +2,10 @@
  * @description prevents functions from the global scope from leaking into the betterEval scope
  */
 function clearContext() {
-  require = null; // make sure require cant be overrided
+  // nonunique variable cancel outs
+  require = null;
+  module = null;
+
   const keys = Object.getOwnPropertyNames(this).concat(["constructor"]);
   keys.forEach((key) => {
     const item = this[key];
