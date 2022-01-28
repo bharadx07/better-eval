@@ -1,8 +1,11 @@
 "use strict";
 
+// runner
 const vm = require("vm");
+// lib
 const insertedClearContext = require("./clearContext");
 const parseInsertedVariables = require("./parseInsertedVariabels");
+const { blackListedContext } = require("./blackList");
 
 /**
  * @description takes code to execute and exexcutes it safely!
@@ -16,13 +19,18 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
   const resultName = "EVAL_RESULT_" + Math.floor(Math.random() * 1000000);
 
   // then assign it to our results object
-  let contextVariables = {};
+  let contextVariables = { ...blackListedContext };
   contextVariables[resultName] = null;
 
   // if we want to add our own variables to the function, take care of parsing that
   if (insertedVariables) {
-    contextVariables = parseInsertedVariables(insertedVariables, contextVariables);
+    contextVariables = parseInsertedVariables(
+      insertedVariables,
+      contextVariables
+    );
   }
+
+  console.log(contextVariables)
 
   //set the variable equal to the code
   const codeExec = `${insertedClearContext}; ${resultName} = ${code}`;
@@ -35,3 +43,5 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
 }
 
 module.exports = betterEval;
+
+console.log(betterEval("require", {require}))
