@@ -42,4 +42,3 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
 
 module.exports = betterEval;
 
-console.log(betterEval("!!Function", {Function}))
