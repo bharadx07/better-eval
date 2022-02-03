@@ -2,27 +2,27 @@
 
 > 🚩 better-eval should not be used with code that could harm your application.
 
-### An alternative to ```eval()``` in JavaScript that is customizable and safer!
+### An alternative to `eval()` in JavaScript that is customizable and safer!
 
 The eval function in JavaScript sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. **better-eval** solves this problem by adressing the security and spped issues, while delivering the same easy-to-use API.
 
 <a href="https://www.producthunt.com/posts/better-eval?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-better-eval" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=327967&theme=light" alt="better-eval - 🔧 An alternative to 'eval' that is just better! | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 <br /><br />
 <a href="https://www.npmjs.com/package/better-eval">
-  <img src="https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000" alt="NPM Version">
-  <img src="https://img.shields.io/npm/dt/better-eval.svg?style=flat-square&color=FF524C&labelColor=000" alt="NPM Version">
-  <img src="https://badgen.net/badgesize/brotli/https/unpkg.com/better-eval/src?style=flat-square&amp;label=size&amp;color=FF524C&amp;labelColor=000" alt="NPM Version">
+<img src="https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000" alt="NPM Version">
+<img src="https://img.shields.io/npm/dt/better-eval.svg?style=flat-square&color=FF524C&labelColor=000" alt="NPM Version">
+<img src="https://badgen.net/badgesize/brotli/https/unpkg.com/better-eval/src?style=flat-square&amp;label=size&amp;color=FF524C&amp;labelColor=000" alt="NPM Version">
 </a>
-
 
 ## Why Better-Eval?
 
 - 🕊 Small and Lightweight.
 - ⚡ A simple and easy to use API.
-- 🛠️  Easily customizable for your needs.
+- 🛠️ Easily customizable for your needs.
 - ✅ Tested and Mantained.
 
 ## Installation
+
 ```sh
 npm install better-eval
 ```
@@ -61,8 +61,21 @@ const returnName = () => "Bob";
 betterEval("`Hey ${returnName()}`", { returnName });
 ```
 
-However, for your safety, usage of the `Function` constructor, `eval` function and `require` function are disabled, and will not be added to your variables.
+## Blacklist
 
+For your safety, any of these global variables on the blacklist will not be added to your variables.
+
+- global
+- process
+- module
+- require
+- document
+- window"
+- Window"
+- eval
+- Function
+
+Here is how these variables will be handled:
 ```js
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
@@ -73,7 +86,8 @@ If you want to have more control over the VM that runs your code, you can pass i
 
 ```js
 betterEval(
-  "1+1", {},
+  "1+1",
+  {},
   {
     fileName: "counting",
     lineOffset: 1,
