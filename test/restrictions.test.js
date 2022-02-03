@@ -1,3 +1,16 @@
+/**
+ * All of these blacklisted variables should not be evaluated:
+  - global
+  - process
+  - module
+  - require
+  - document
+  - window
+  - Window
+  - eval
+  - Function
+ */
+
 const betterEval = require("../src/");
 
 test("should not be able to pass eval", () => {
@@ -25,4 +38,13 @@ test("should not be able to pass require", () => {
   const expected = null;
   // test
   expect(failRequire).toBe(expected);
+});
+
+test("should not be able to pass global", () => {
+  // no pass global
+  const failGlobal = betterEval("global", { global });
+  // expected
+  const expected = null;
+  // test
+  expect(failGlobal).toBe(expected);
 });
