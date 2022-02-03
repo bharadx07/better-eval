@@ -97,4 +97,4 @@ A complete list of options can be found [here](https://nodejs.org/api/vm.html#vm
 
 ## License
 
-Better-Eval is [MIT-licensed](LICENSE) open-source software created by Bharadwaj Duggaraju.
+better-eval is [MIT-licensed](LICENSE) open-source software created by Bharadwaj Duggaraju.
