@@ -63,19 +63,19 @@ betterEval("`Hey ${returnName()}`", { returnName });
 
 ## Blacklist
 
-For your safety, any of these global variables on the blacklist will not be added to your variables.
+For your safety, any of these global variables on the blacklist will not be added to your variables:
 
 - global
 - process
 - module
 - require
 - document
-- window"
-- Window"
+- window
+- Window
 - eval
 - Function
 
-Here is how these variables will be handled:
+Here is how they will be handled:
 ```js
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
