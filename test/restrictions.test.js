@@ -48,3 +48,21 @@ test("should not be able to pass global", () => {
   // test
   expect(failGlobal).toBe(expected);
 });
+
+test("should not be able to pass process", () => {
+  // no pass process
+  const failProcess = betterEval("process", { process });
+  // expected
+  const expected = null;
+  // test
+  expect(failProcess).toBe(expected);
+});
+
+test("should not be able to pass module", () => {
+  // no pass module
+  const failModule = betterEval("module", { module });
+  // expected
+  const expected = null;
+  // test
+  expect(failModule).toBe(expected);
+});
