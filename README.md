@@ -1,6 +1,6 @@
-# 🔧 better-eval
+# better-eval
 
-### An alternative to `eval()` in JavaScript that is customizable and safer!
+### 🔧 An alternative to `eval()` in JavaScript that is customizable and safer!
 
 The eval function in JavaScript sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. **better-eval** solves this problem by adressing the security and spped issues, while delivering the same easy-to-use API.
 
