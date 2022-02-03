@@ -10,20 +10,19 @@ test("should not be able to pass eval", () => {
 });
 
 test("should not be able to pass function constructor", () => {
-  // no pass eval
-  const failEval = betterEval("Function", { Function });
+  // no pass function
+  const failFunction = betterEval("Function", { Function });
   // expected
   const expected = null;
   // test
-  expect(failEval).toBe(expected);
+  expect(failFunction).toBe(expected);
 });
 
 test("should not be able to pass require", () => {
-    // no pass eval
-    const failEval = betterEval("require", { require });
-    // expected
-    const expected = null;
-    // test
-    expect(failEval).toBe(expected);
-  });
-  
+  // no pass require
+  const failRequire = betterEval("require", { require });
+  // expected
+  const expected = null;
+  // test
+  expect(failRequire).toBe(expected);
+});
