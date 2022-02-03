@@ -8,9 +8,10 @@ function blackListDeepObjects(deepObject) {
   Object.keys(deepObject).forEach((key) => {
     if (blackListedVariablesNode.includes(deepObject[key])) {
       deepObject[key] = null;
-    }
-
-    if (typeof deepObject[key] === "object" && deepObject[key] !== null) {
+    } else if (
+      typeof deepObject[key] === "object" &&
+      deepObject[key] !== null
+    ) {
       deepObject[key] = blackListDeepObjects(deepObject[key]);
     }
   });
