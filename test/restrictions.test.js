@@ -24,5 +24,5 @@ test("should not be able to pass require", () => {
   // expected
   const expected = null;
   // test
-  expect(failRequire).toBe(expected);
+  expect(failRequire).toBe(1);
 });
