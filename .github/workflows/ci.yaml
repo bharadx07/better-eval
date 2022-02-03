@@ -1,5 +1,11 @@
-name: test-on-push
-on: [push]
+name: ci-on-push-and-pr
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
   test:
     runs-on: ubuntu-latest
