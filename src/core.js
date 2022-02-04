@@ -9,10 +9,10 @@ const { blackListedContext } = require("./blackList");
 
 /**
  * @description takes code to execute and exexcutes it safely!
- * @param {string} code - Code to be executed.
- * @param {object} insertedVariables - Variables from your code to pass into the execution context. Passed in like: {variableName, variableValue}
- * @param {object} vmOptions - The options for how to run the VM to execute the code (more info in vm pkg docs).
- * @returns {any} if your evaluated code returns a value, then betterEval will return it to you.
+ * @param {string} code - code to be executed.
+ * @param {object} insertedVariables - variables from your code to pass into the execution context. passed in like: {variableName, variableValue}
+ * @param {object} vmOptions - the options for how to run the VM to execute the code (more info in vm pkg docs).
+ * @returns {any} if your evaluated code returns a value, then betterEval will return that.
  */
 function betterEval(code, insertedVariables = null, vmOptions = {}) {
   // start by generating a random variable name for our evaled value
@@ -41,4 +41,3 @@ function betterEval(code, insertedVariables = null, vmOptions = {}) {
 }
 
 module.exports = betterEval;
-

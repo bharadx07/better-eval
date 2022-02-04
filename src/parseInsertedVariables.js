@@ -7,6 +7,13 @@ const { blackListedVariablesNode } = require("./blackList");
 function parseInsertedVariables(vars, sandbox) {
   Object.keys(vars).forEach(function (key) {
     if (blackListedVariablesNode.includes(vars[key])) return;
+    if (typeof vars[key] === "object") {
+      Object.keys(vars[key]).forEach((k) => {
+        if (blackListedVariablesNode.includes(vars[key][k])) {
+          vars[key][k] = null;
+        }
+      });
+    }
     sandbox[key] = vars[key];
   });
 
