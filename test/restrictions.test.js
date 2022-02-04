@@ -66,3 +66,22 @@ test("should not be able to pass module", () => {
   // test
   expect(failModule).toBe(expected);
 });
+
+test("should not be able to use lv.1 mal nested variables", () => {
+  // no pass mal nested
+  const failNested = betterEval("attemptexploit.eval", {
+    attemptexploit: { eval },
+  });
+  const failNestedTwo = betterEval("attemptexploit.Function", {
+    attemptexploit: { Function },
+  });
+  const failNestedThree = betterEval("attemptexploit.process", {
+    attemptexploit: { process },
+  });
+  // expected
+  const expected = null;
+  // test
+  expect(failNested).toBe(expected);
+  expect(failNestedTwo).toBe(expected);
+  expect(failNestedThree).toBe(expected);
+});
