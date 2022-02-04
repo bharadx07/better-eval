@@ -79,7 +79,7 @@ Here is how they will be handled:
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
 
-Special case (more solutions are being developed):
+Nested variables (in development):
 
 ```js
 betterEval("triedtohack.eval(1+1)", { triedtohack: { eval } }); // triedtohack.eval is null;
