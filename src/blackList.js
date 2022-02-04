@@ -18,6 +18,7 @@ const blackListedVariableStrings = [
 const blackListedContext = {};
 blackListedVariableStrings.forEach((bl) => (blackListedContext[bl] = null));
 
+
 module.exports = {
   blackListedVariablesNode,
   blackListedContext,
