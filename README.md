@@ -63,17 +63,18 @@ betterEval("`Hey ${returnName()}`", { returnName });
 
 For your safety, any of these global variables on the blacklist will not be added to your variables:
 
-- global
-- process
-- module
-- require
-- document
-- window
-- Window
-- eval
-- Function
+- ```global```
+- ```process```
+- ```module```
+- ```require```
+- ```document```
+- ```window```
+- ```Window```
+- ```eval```
+- ```Function```
 
 Here is how they will be handled:
+
 ```js
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
@@ -97,4 +98,4 @@ A complete list of options can be found [here](https://nodejs.org/api/vm.html#vm
 
 ## License
 
-better-eval is [MIT-licensed](LICENSE) open-source software created by Bharadwaj Duggaraju.
+**better-eval** is [MIT-licensed](LICENSE) open-source software created by Bharadwaj Duggaraju.
