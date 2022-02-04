@@ -63,20 +63,26 @@ betterEval("`Hey ${returnName()}`", { returnName });
 
 For your safety, any of these global variables on the blacklist will not be added to your variables:
 
-- ```global```
-- ```process```
-- ```module```
-- ```require```
-- ```document```
-- ```window```
-- ```Window```
-- ```eval```
-- ```Function```
+- `global`
+- `process`
+- `module`
+- `require`
+- `document`
+- `window`
+- `Window`
+- `eval`
+- `Function`
 
 Here is how they will be handled:
 
 ```js
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
+```
+
+Special case (more solutions are being developed):
+
+```js
+betterEval("triedtohack.eval(1+1)", { triedtohack: { eval } }); // triedtohack.eval is null;
 ```
 
 ## Configuring the VM
