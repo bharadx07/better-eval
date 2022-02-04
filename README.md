@@ -91,8 +91,7 @@ If you want to have more control over the VM that runs your code, you can pass i
 
 ```js
 betterEval(
-  "1+1",
-  {},
+  "1+1", {},
   {
     fileName: "counting",
     lineOffset: 1,
