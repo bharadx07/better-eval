@@ -79,7 +79,7 @@ Here is how they will be handled:
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
 
-> Remember: **never use better-eval blindly with user-code.** These checks are precautions for your own usage, but any user with maltious intent could use them for their advantage. Thus, use this package with caution.
+> Remember: **never use better-eval blindly with user-code.** These checks are precautions for your own usage, but any user with maltious intent could find a way to get through them. Thus, use this package with caution.
 
 ## Configuring the VM
 
