@@ -79,11 +79,7 @@ Here is how they will be handled:
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
 
-Nested variables (in development):
-
-```js
-betterEval("triedtohack.eval(1+1)", { triedtohack: { eval } }); // triedtohack.eval is null;
-```
+However: this system isn't perfect, so be careful about what variables you pass into betterEval, they can completly destroy the purpose of the function.
 
 ## Configuring the VM
 
