@@ -2,7 +2,7 @@
 
 ### An alternative to `eval()` in JavaScript that is customizable and safer!
 
-The eval function sucks, and there lacks alternatives that provide the same simplicity that the original eval function had. **better-eval** solves this problem by adressing the security and speed issues, while delivering the same easy-to-use API.
+The eval function sucks, and there lacks alternatives that provide the same simplicity of the original eval function. **better-eval** solves this problem by adressing the security and speed issues, while delivering a sensible API.
 
 <a href="https://www.producthunt.com/posts/better-eval?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-better-eval" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=327967&theme=light" alt="better-eval - 🔧 An alternative to 'eval' that is just better! | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 <br /><br />
