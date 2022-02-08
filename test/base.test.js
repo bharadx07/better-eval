@@ -1,3 +1,7 @@
+/**
+ * better-eval should have basic functionality
+ */
+
 const betterEval = require("../src");
 
 test("should evaluate a simple expression", () => {

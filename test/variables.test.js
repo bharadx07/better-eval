@@ -1,3 +1,7 @@
+/**
+ * better-eval should be able to handle custom variables
+ */
+
 const betterEval = require("../src");
 
 test("should be able to pass in string variables", () => {
