@@ -36,7 +36,7 @@ const betterEval = require("better-eval");
 Then call the function with something you want to be evaluated:
 
 ```js
-betterEval("1+1"); // returns 2!
+betterEval("1+1"); // returns 2
 ```
 
 And its as simple as that! Any code will not be able to access variables you define unless explicitly passed.
