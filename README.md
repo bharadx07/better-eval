@@ -1,4 +1,4 @@
-# 🔧 better-eval
+# <img src="https://raw.githubusercontent.com/bharadwajduggaraju/better-eval/master/.github/assets/logo.png" alt="better-eval logo" />
 
 ### An alternative to `eval()` in JavaScript that is customizable and safer!
 
