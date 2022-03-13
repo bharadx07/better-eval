@@ -2,7 +2,7 @@
 
 ### An alternative to `eval()` in JavaScript that is customizable and safer!
 
-*The eval function is a **crutch**, lacking any form of security and customizability. Other implementations are **inadequate** - ranging from being abandonded to overcomplicated, and there isn't a all-in-one package.* **better-eval** offers a solution, providing a **modern** alternative to the eval function with all the **bells and whistles** out of the box.. 
+*The eval function is a **crutch**, lacking any form of security and customizability. Other implementations are **inadequate** - ranging from being abandonded to overcomplicated, and there isn't a all-in-one package.* **better-eval** offers a solution, providing a **modern** alternative to the eval function with all the **bells and whistles** out of the box.
 
 
 <a href="https://www.npmjs.com/package/better-eval">
