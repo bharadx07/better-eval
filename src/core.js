@@ -8,8 +8,8 @@ const parseInsertedVariables = require("./parseInsertedVariables");
 const { blackListedContext } = require("./blackList");
 
 /**
- * @description takes code to execute and exexcutes it safely!
- * @param {string} code - code to be executed.
+ * @description takes code to evaluate and evalutes it in a vm with your configuration.
+ * @param {string} code - code to be evaluated.
  * @param {object} insertedVariables - variables from your code to pass into the execution context. passed in like: {variableName, variableValue}
  * @param {object} vmOptions - the options for how to run the VM to execute the code (more info in vm pkg docs).
  * @returns {any} if your evaluated code returns a value, then betterEval will return that.

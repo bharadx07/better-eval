@@ -1,9 +1,9 @@
 const { blackListedVariablesNode } = require("./blackList");
 
 /**
- * @param {object} vars
- * @param {'local' | 'vm'} execContext
- * @description parses user variables into context and prevents mal variables and objects (lv 1).
+ * @param {object} vars user variables
+ * @param {object} sandbox context with user variables
+ * @description adds user variables into exec context and prevents mal variables and objects (basic).
  * @returns {object} sandbox context with user variables.
  */
 function parseInsertedVariables(vars, sandbox) {
