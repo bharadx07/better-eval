@@ -1,8 +1,8 @@
 const { blackListedVariablesNode } = require("./blackList");
 
 /**
- * @param {object} vars user variables
- * @param {object} sandbox context with user variables
+ * @param {object} vars - user variables
+ * @param {object} sandbox - context with user variables
  * @description adds user variables into exec context and prevents mal variables and objects (basic).
  * @returns {object} sandbox context with user variables.
  */
