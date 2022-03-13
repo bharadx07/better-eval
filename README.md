@@ -2,22 +2,24 @@
 
 ### An alternative to `eval()` in JavaScript that is customizable and safer!
 
-The eval function sucks, and there lacks alternatives that provide the same simplicity of the original eval function. **better-eval** solves this problem by adressing the security and speed issues, while delivering a sensible API.
+*The eval function is a **crutch**, lacking any form of security and customizability. Other implementations are **inadequate** - ranging from being abandonded to overcomplicated, and there isn't a all-in-one package.* **better-eval** offers a solution, providing a **modern** alternative to the eval function with all the **bells and whistles** out of the box.. 
 
-<a href="https://www.producthunt.com/posts/better-eval?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-better-eval" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=327967&theme=light" alt="better-eval - 🔧 An alternative to 'eval' that is just better! | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-<br /><br />
+
 <a href="https://www.npmjs.com/package/better-eval">
 <img src="https://img.shields.io/npm/v/better-eval?style=flat-square&color=FF524C&labelColor=000" alt="NPM Version">
 <img src="https://img.shields.io/npm/dt/better-eval.svg?style=flat-square&color=FF524C&labelColor=000" alt="NPM Version">
 <img src="https://badgen.net/badgesize/brotli/https/unpkg.com/better-eval/src?style=flat-square&amp;label=size&amp;color=FF524C&amp;labelColor=000" alt="NPM Version">
 </a>
 
+<br /><br />
+<a href="https://www.producthunt.com/posts/better-eval?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-better-eval" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=327967&theme=light" alt="better-eval - 🔧 An alternative to 'eval' that is just better! | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ## Why Better-Eval?
 
-- 🕊 Small and Lightweight.
+- 🕊 Small and lightweight.
 - ⚡ A simple and easy to use API.
 - 🛠️ Easily customizable for your needs.
-- ✅ Tested and Mantained.
+- ✅ Tested and mantained.
 
 ## Installation
 
@@ -79,7 +81,7 @@ Here is how they will be handled:
 betterEval("`Sum is ${eval('1+1')}`", { eval }); // eval is null!
 ```
 
-> Remember: **never use better-eval blindly with user-code.** These checks are precautions for your own usage, but any user with maltious intent could find a way to get through them. Thus, use this package with caution.
+> Remember: **never use better-eval blindly with user code.** These checks are precautions for your own usage, but any user with maltious intent could find a way to get through them. Thus, use this package with caution.
 
 ## Configuring the VM
 
